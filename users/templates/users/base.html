@@ -1,0 +1,38 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Authentication</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'users/main.css' %}"
+    />
+  </head>
+  <body>
+    <div class="box">
+      <div class="container">
+        {% block content %}
+        <!-- <h1 id="heading">Welcome</h1> -->
+
+
+        
+
+        <!-- <div class="btn"><a href="{% url 'register' %}">Register</a></div>
+        <div class="btn"><a href="{% url 'login' %}">Login</a></div> -->
+
+        {% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- <h1>Home</h1>
+{% if user.is_authenticated %}
+<h4>Welcome {{ user.username }}</h4>
+<a href="{% url 'logout' %}">Logout</a>
+{% else %}
+<a href="{% url 'register' %}">Register</a>
+<a href="{% url 'login' %}">Login</a>
+{% endif %} -->

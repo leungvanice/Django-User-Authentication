@@ -1,6 +1,25 @@
-<h1>Sign up now</h1>
+{% extends 'users/base.html' %}
+{% block content %}
+<!-- <style>
+    input {
+    margin: auto;
+    text-align: center;
+    width: 200px;
+    display: block;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 40px;
+    padding-top: 5px;
+    border: 2px solid #6ea9b8;
+    border-radius: 5px;
+    background-color: black;
+}
+</style> -->
+<h1 id="heading">Sign up</h1>
 <form method="POST"> 
     {% csrf_token %}
-    {{ form }}
+    {{ form.as_p }}
     <input type="submit" value="Sign up"></form>
 </form>
+{% endblock %}
